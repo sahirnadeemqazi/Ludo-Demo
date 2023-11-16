@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Ludo Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: Ludo Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d2494af5ee49b48059d3a54eebbb10ca
+  m_SerializeEntries:
+  - m_GUID: 72d1fcc9edca94ba89ae3b7cf20bfa4f
+    m_Address: Assets/_Project/Sprites/Ludo Board/ChipBlue.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: df41f38238c444bb58a14c134c94b49e
+    m_Address: Assets/_Project/Sprites/Ludo Board/ChipGreen.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 65d30a9e7603e418982ecbd30dc3a19b
+    m_Address: Assets/_Project/Sprites/Ludo Board/ChipRed.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8440308fc0fb04e4484c862334dfd762
+    m_Address: Assets/_Project/Sprites/Ludo Board/ChipYellow.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 675b409980d6648738a2da1194e7a081
+    m_Address: Assets/_Project/Sprites/Ludo Board/LudoBoard.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 63ec89cc5b0844a9a80531664fd2ac9d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f1a2330c63be147f3b1352a642db3fad, type: 2}
+    - {fileID: 11400000, guid: 37b59cca2fdaf4b1990a19040359cdee, type: 2}

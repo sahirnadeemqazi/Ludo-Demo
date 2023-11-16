@@ -19,6 +19,11 @@ namespace _Project.Scripts
             _startingPosition = transform.position;
         }
 
+        public void ResetChip()
+        {
+            transform.position = _startingPosition;
+        }
+
         private void OnMouseDown()
         {
             if (GameController.Instance.selectedColor != thisChipColor)

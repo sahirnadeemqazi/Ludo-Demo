@@ -21,5 +21,11 @@ namespace _Project.Scripts
             mainScreen.SetActive(false);
             gamePlayScreen.SetActive(true);
         }
+
+        public void ResetChips()
+        {
+            GameController.Instance.currentDiceValue = 0;
+            GameController.Instance.ResetChips();
+        }
     }
 }
