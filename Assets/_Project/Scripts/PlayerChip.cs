@@ -129,7 +129,7 @@ namespace _Project.Scripts
                 if (_currentGridCell.isWinCell)
                 {
                     Debug.Log("This Chip Won");
-                    GetComponent<Collider>().enabled = false;
+                    GetComponent<Collider2D>().enabled = false;
                 }
             }
         }

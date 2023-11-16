@@ -11,6 +11,7 @@ namespace _Project.Scripts
         public static GameController Instance;
         public GridCell.Color selectedColor;
         public bool isChipMoving;
+        public bool isGeneratingRandom;
         public int currentDiceValue;
 
         public List<GridCell> gridCells;

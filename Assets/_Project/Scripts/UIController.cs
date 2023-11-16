@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace _Project.Scripts
@@ -10,7 +11,18 @@ namespace _Project.Scripts
         
         public void RollDiceButton()
         {
-            GameController.Instance.currentDiceValue = Random.Range(1, 7);
+            //GameController.Instance.currentDiceValue = Random.Range(1, 7);
+            
+            if (GameController.Instance.isGeneratingRandom || GameController.Instance.isChipMoving) return;
+
+            GameController.Instance.isGeneratingRandom = true;
+            Action<int> randomNumber = (result) =>
+            {
+                GameController.Instance.isGeneratingRandom = false;
+                GameController.Instance.currentDiceValue = result;
+            };
+
+            StartCoroutine(GetRandom.GenerateRandomNumber(randomNumber));
         }
 
         public void SelectColor(int colorID)
