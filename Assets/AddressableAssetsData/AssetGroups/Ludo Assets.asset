@@ -37,6 +37,30 @@ MonoBehaviour:
     m_Address: Assets/_Project/Sprites/Ludo Board/LudoBoard.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 80ee01155ca0e4b5e83fd2510597a2e7
+    m_Address: Assets/_Project/Sprites/Dice/01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d9d0bb57de561476c95025714772004e
+    m_Address: Assets/_Project/Sprites/Dice/02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7b1ecc4b3ab1e45058d695c2b4674c54
+    m_Address: Assets/_Project/Sprites/Dice/03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0ec475ae6541e460c8a62f5d6259b8e8
+    m_Address: Assets/_Project/Sprites/Dice/04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ee9d4a62c8b55440e8eb38fdfa42b376
+    m_Address: Assets/_Project/Sprites/Dice/05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f47a8b4ac34a644ef94f1b95110fa3f1
+    m_Address: Assets/_Project/Sprites/Dice/06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 63ec89cc5b0844a9a80531664fd2ac9d, type: 2}
   m_SchemaSet:

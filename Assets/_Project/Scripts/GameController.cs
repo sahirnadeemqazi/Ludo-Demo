@@ -1,7 +1,9 @@
-using System;
+
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.AddressableAssets.ResourceLocators;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace _Project.Scripts
@@ -21,16 +23,14 @@ namespace _Project.Scripts
 
         public GameObject ludoBoard;
 
-        [SerializeField] private List<PlayerChip> _redPlayerChips;
-        [SerializeField] private List<PlayerChip> _bluePlayerChips;
-        [SerializeField] private List<PlayerChip> _greenPlayerChips;
-        [SerializeField] private List<PlayerChip> _yellowPlayerChips;
+        public List<PlayerChip> _redPlayerChips;
+        public List<PlayerChip> _bluePlayerChips;
+        public List<PlayerChip> _greenPlayerChips;
+        public List<PlayerChip> _yellowPlayerChips;
+        
 
-        [SerializeField] private string redChipSpriteAddress;
-        [SerializeField] private string blueChipSpriteAddress;
-        [SerializeField] private string greenChipSpriteAddress;
-        [SerializeField] private string yellowChipSpriteAddress;
-        [SerializeField] private string boardAddress;
+        public List<Sprite> diceFaces;
+
 
         private void Awake()
         {
@@ -46,58 +46,7 @@ namespace _Project.Scripts
 
         private void Start()
         {
-            LoadAddressables();
-        }
-
-        private void LoadAddressables()
-        {
-            var addressables = Addressables.InitializeAsync();
-
-            addressables.Completed += _ =>
-            {
-                var redSprites = Addressables.LoadAssetAsync<Sprite>(redChipSpriteAddress);
-                var blueSprites = Addressables.LoadAssetAsync<Sprite>(blueChipSpriteAddress);
-                var greenSprites = Addressables.LoadAssetAsync<Sprite>(greenChipSpriteAddress);
-                var yellowSprites = Addressables.LoadAssetAsync<Sprite>(yellowChipSpriteAddress);
-                var boardSprite = Addressables.LoadAssetAsync<Sprite>(boardAddress);
-                
-                redSprites.Completed += operation =>
-                {
-                    foreach (var redChip in _redPlayerChips)
-                    {
-                        redChip.GetComponent<SpriteRenderer>().sprite = operation.Result;
-                    }
-                };
-                
-                blueSprites.Completed += operation =>
-                {
-                    foreach (var blueChip in _bluePlayerChips)
-                    {
-                        blueChip.GetComponent<SpriteRenderer>().sprite = operation.Result;
-                    }
-                };
-                
-                greenSprites.Completed += operation =>
-                {
-                    foreach (var greenChip in _greenPlayerChips)
-                    {
-                        greenChip.GetComponent<SpriteRenderer>().sprite = operation.Result;
-                    }
-                };
-                
-                yellowSprites.Completed += operation =>
-                {
-                    foreach (var yellowChip in _yellowPlayerChips)
-                    {
-                        yellowChip.GetComponent<SpriteRenderer>().sprite = operation.Result;
-                    }
-                };
-                
-                boardSprite.Completed += operation =>
-                {
-                    ludoBoard.GetComponent<SpriteRenderer>().sprite = operation.Result;
-                };
-            };
+            LoadAddressables.InitializeAddressables();
         }
 
         public void AssignSelectedWinCells()
