@@ -290,18 +290,8 @@ MonoBehaviour:
   - {fileID: 752550825}
   - {fileID: 804794622}
   - {fileID: 648772304}
-  redChipSpriteAddress: Assets/_Project/Sprites/Ludo Board/ChipRed.png
-  blueChipSpriteAddress: Assets/_Project/Sprites/Ludo Board/ChipBlue.png
-  greenChipSpriteAddress: Assets/_Project/Sprites/Ludo Board/ChipGreen.png
-  yellowChipSpriteAddress: Assets/_Project/Sprites/Ludo Board/ChipYellow.png
-  boardAddress: Assets/_Project/Sprites/Ludo Board/LudoBoard.png
-  diceFace01: 
-  diceFace02: 
-  diceFace03: 
-  diceFace04: 
-  diceFace05: 
-  diceFace06: 
   diceFaces: []
+  diceScript: {fileID: 221024803}
 --- !u!114 &83208219 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3534973551978697970, guid: 337cc35e65ce643a49dc68f32395150a, type: 3}
@@ -367,6 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221024802}
   - component: {fileID: 221024801}
+  - component: {fileID: 221024803}
   m_Layer: 0
   m_Name: Dice
   m_TagString: Untagged
@@ -435,12 +426,24 @@ Transform:
   m_GameObject: {fileID: 221024800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &221024803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221024800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27f67f46c17a48a7b91860557ed0a69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &263633550 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3534973551898805863, guid: 337cc35e65ce643a49dc68f32395150a, type: 3}

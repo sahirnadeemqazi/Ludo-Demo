@@ -16,10 +16,12 @@ namespace _Project.Scripts
             if (GameController.Instance.isGeneratingRandom || GameController.Instance.isChipMoving) return;
 
             GameController.Instance.isGeneratingRandom = true;
+            GameController.Instance.diceScript.DiceAnimStart();
             Action<int> randomNumber = (result) =>
             {
                 GameController.Instance.isGeneratingRandom = false;
                 GameController.Instance.currentDiceValue = result;
+                GameController.Instance.diceScript.DiceAnimationStop();
             };
 
             StartCoroutine(GetRandom.GenerateRandomNumber(randomNumber));

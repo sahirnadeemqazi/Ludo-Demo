@@ -31,6 +31,8 @@ namespace _Project.Scripts
 
         public List<Sprite> diceFaces;
 
+        public Dice diceScript;
+
 
         private void Awake()
         {
